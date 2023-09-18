@@ -386,16 +386,18 @@
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(700, 119);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(252, 22);
+            this.dateTimePicker1.Size = new System.Drawing.Size(167, 22);
             this.dateTimePicker1.TabIndex = 42;
             // 
             // dateTimePicker2
             // 
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker2.Location = new System.Drawing.Point(370, 197);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(252, 22);
+            this.dateTimePicker2.Size = new System.Drawing.Size(170, 22);
             this.dateTimePicker2.TabIndex = 43;
             // 
             // LeavesForm
