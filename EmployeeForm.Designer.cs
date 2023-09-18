@@ -34,20 +34,19 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtStaffName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtStaffPhone = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtStaffPass = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtStaffAddress = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.dgnEmployee = new System.Windows.Forms.DataGridView();
+            this.dgnEmployeeList = new System.Windows.Forms.DataGridView();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -58,19 +57,25 @@
             this.label12 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.cbStaffGender = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgnEmployee)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgnEmployeeList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel1.Controls.Add(this.label13);
+            this.panel1.Controls.Add(this.pictureBox6);
             this.panel1.Controls.Add(this.pictureBox5);
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.pictureBox4);
@@ -128,19 +133,12 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Staff Name";
             // 
-            // textBox1
+            // txtStaffName
             // 
-            this.textBox1.Location = new System.Drawing.Point(337, 113);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(174, 22);
-            this.textBox1.TabIndex = 5;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(546, 113);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(174, 22);
-            this.textBox2.TabIndex = 7;
+            this.txtStaffName.Location = new System.Drawing.Point(337, 113);
+            this.txtStaffName.Name = "txtStaffName";
+            this.txtStaffName.Size = new System.Drawing.Size(174, 22);
+            this.txtStaffName.TabIndex = 5;
             // 
             // label4
             // 
@@ -149,16 +147,16 @@
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(542, 90);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(103, 20);
+            this.label4.Size = new System.Drawing.Size(116, 20);
             this.label4.TabIndex = 6;
-            this.label4.Text = "Staff Name";
+            this.label4.Text = "Staff Gender";
             // 
-            // textBox3
+            // txtStaffPhone
             // 
-            this.textBox3.Location = new System.Drawing.Point(757, 113);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(174, 22);
-            this.textBox3.TabIndex = 9;
+            this.txtStaffPhone.Location = new System.Drawing.Point(757, 119);
+            this.txtStaffPhone.Name = "txtStaffPhone";
+            this.txtStaffPhone.Size = new System.Drawing.Size(174, 22);
+            this.txtStaffPhone.TabIndex = 9;
             // 
             // label5
             // 
@@ -167,34 +165,36 @@
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(753, 90);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(103, 20);
+            this.label5.Size = new System.Drawing.Size(136, 20);
             this.label5.TabIndex = 8;
-            this.label5.Text = "Staff Name";
+            this.label5.Text = "Staff Phone No";
             // 
-            // textBox4
+            // txtStaffPass
             // 
-            this.textBox4.Location = new System.Drawing.Point(435, 195);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(174, 22);
-            this.textBox4.TabIndex = 11;
+            this.txtStaffPass.Location = new System.Drawing.Point(435, 195);
+            this.txtStaffPass.Name = "txtStaffPass";
+            this.txtStaffPass.Size = new System.Drawing.Size(174, 22);
+            this.txtStaffPass.TabIndex = 11;
+            this.txtStaffPass.Visible = false;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(431, 172);
+            this.label6.Location = new System.Drawing.Point(432, 172);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(103, 20);
+            this.label6.Size = new System.Drawing.Size(137, 20);
             this.label6.TabIndex = 10;
-            this.label6.Text = "Staff Name";
+            this.label6.Text = "Staff Password";
+            this.label6.Visible = false;
             // 
-            // textBox5
+            // txtStaffAddress
             // 
-            this.textBox5.Location = new System.Drawing.Point(757, 195);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(174, 22);
-            this.textBox5.TabIndex = 13;
+            this.txtStaffAddress.Location = new System.Drawing.Point(757, 195);
+            this.txtStaffAddress.Name = "txtStaffAddress";
+            this.txtStaffAddress.Size = new System.Drawing.Size(174, 22);
+            this.txtStaffAddress.TabIndex = 13;
             // 
             // label7
             // 
@@ -203,9 +203,9 @@
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(753, 172);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(103, 20);
+            this.label7.Size = new System.Drawing.Size(124, 20);
             this.label7.TabIndex = 12;
-            this.label7.Text = "Staff Name";
+            this.label7.Text = "Staff Address";
             // 
             // btnEdit
             // 
@@ -242,15 +242,15 @@
             this.panel3.Size = new System.Drawing.Size(997, 10);
             this.panel3.TabIndex = 17;
             // 
-            // dgnEmployee
+            // dgnEmployeeList
             // 
-            this.dgnEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgnEmployee.Location = new System.Drawing.Point(224, 300);
-            this.dgnEmployee.Name = "dgnEmployee";
-            this.dgnEmployee.RowHeadersWidth = 51;
-            this.dgnEmployee.RowTemplate.Height = 24;
-            this.dgnEmployee.Size = new System.Drawing.Size(979, 354);
-            this.dgnEmployee.TabIndex = 18;
+            this.dgnEmployeeList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgnEmployeeList.Location = new System.Drawing.Point(224, 300);
+            this.dgnEmployeeList.Name = "dgnEmployeeList";
+            this.dgnEmployeeList.RowHeadersWidth = 51;
+            this.dgnEmployeeList.RowTemplate.Height = 24;
+            this.dgnEmployeeList.Size = new System.Drawing.Size(979, 354);
+            this.dgnEmployeeList.TabIndex = 18;
             // 
             // label8
             // 
@@ -266,7 +266,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(4, 185);
+            this.pictureBox2.Location = new System.Drawing.Point(21, 310);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(20, 20);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -278,7 +278,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(30, 185);
+            this.label9.Location = new System.Drawing.Point(47, 310);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(100, 20);
             this.label9.TabIndex = 20;
@@ -289,7 +289,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(30, 237);
+            this.label10.Location = new System.Drawing.Point(47, 362);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(69, 20);
             this.label10.TabIndex = 22;
@@ -298,7 +298,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(2, 237);
+            this.pictureBox1.Location = new System.Drawing.Point(19, 362);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(20, 20);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -310,16 +310,16 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(29, 291);
+            this.label11.Location = new System.Drawing.Point(46, 416);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(166, 20);
+            this.label11.Size = new System.Drawing.Size(100, 20);
             this.label11.TabIndex = 24;
-            this.label11.Text = "Leaves Categories";
+            this.label11.Text = "Categories";
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(3, 291);
+            this.pictureBox3.Location = new System.Drawing.Point(20, 416);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(20, 20);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -331,7 +331,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(47, 619);
+            this.label12.Location = new System.Drawing.Point(60, 622);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(86, 20);
             this.label12.TabIndex = 26;
@@ -340,7 +340,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(5, 612);
+            this.pictureBox4.Location = new System.Drawing.Point(22, 616);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(30, 30);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -358,26 +358,58 @@
             this.pictureBox5.TabStop = false;
             this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(20, 117);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(161, 20);
+            this.label13.TabIndex = 29;
+            this.label13.Text = "FAB-I Leaves M.S";
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(70, 61);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(55, 49);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 28;
+            this.pictureBox6.TabStop = false;
+            // 
+            // cbStaffGender
+            // 
+            this.cbStaffGender.FormattingEnabled = true;
+            this.cbStaffGender.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.cbStaffGender.Location = new System.Drawing.Point(546, 117);
+            this.cbStaffGender.Name = "cbStaffGender";
+            this.cbStaffGender.Size = new System.Drawing.Size(167, 24);
+            this.cbStaffGender.TabIndex = 20;
+            // 
             // EmployeeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1210, 666);
+            this.Controls.Add(this.cbStaffGender);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.dgnEmployee);
+            this.Controls.Add(this.dgnEmployeeList);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnEdit);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.txtStaffAddress);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtStaffPass);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtStaffPhone);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtStaffName);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel2);
@@ -390,12 +422,13 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgnEmployee)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgnEmployeeList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -408,20 +441,19 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtStaffName;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtStaffPhone;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtStaffPass;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtStaffAddress;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.DataGridView dgnEmployee;
+        private System.Windows.Forms.DataGridView dgnEmployeeList;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.PictureBox pictureBox3;
@@ -432,5 +464,8 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.ComboBox cbStaffGender;
     }
 }
